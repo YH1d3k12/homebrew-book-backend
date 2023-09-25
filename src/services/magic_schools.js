@@ -1,4 +1,4 @@
-const MagicSchoolRepository = require('../repositories/magic_school.js');
+const MagicSchoolRepository = require('../repositories/magic_schools.js');
 
 const repositories = new MagicSchoolRepository();
 
