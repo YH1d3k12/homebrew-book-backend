@@ -1,5 +1,5 @@
 const express = require('express');
-const MagicSchoolController = require('../controllers/magic_school.js');
+const MagicSchoolController = require('../controllers/magic_schools.js');
 
 const controller = new MagicSchoolController();
 const router = express.Router();

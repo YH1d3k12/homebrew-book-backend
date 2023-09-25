@@ -1,4 +1,4 @@
-const MagicSchoolServices = require('../services/magic_school');
+const MagicSchoolServices = require('../services/magic_schools.js');
 
 const services = new MagicSchoolServices();
 
