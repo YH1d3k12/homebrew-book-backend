@@ -4,7 +4,7 @@ const db = require('./database.js');
 const magicSchools = `
     CREATE TABLE IF NOT EXISTS MagicSchools 
     (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        id INTEGER PRIMARY KEY,
         name TEXT NOT NULL
     )
 `;
@@ -24,7 +24,7 @@ db.run(magicSchools, (err) => {
 const spells = `
     CREATE TABLE IF NOT EXISTS Spells
     (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        id INTEGER PRIMARY KEY,
         level INTEGER,
         name TEXT,
         type INTEGER,
