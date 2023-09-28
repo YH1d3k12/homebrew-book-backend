@@ -10,7 +10,11 @@ class SpellsRepository
     /******************** Get ********************/
     async GetAllSpells() 
     {
-        const sql = `SELECT * FROM ${this.tableName}`;
+        const sql = `
+        SELECT spells.*, MagicSchools.name AS type_name
+        FROM ${this.tableName} AS spells
+        INNER JOIN MagicSchools ON spells.type = MagicSchools.id
+    `;
  
         const rows = await new Promise((resolve, reject) => {
             db.all(sql, [], (err, rows) => {
