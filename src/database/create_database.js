@@ -1,6 +1,6 @@
 const db = require('./database.js');
 
-// Definir a estrutura da tabela
+// Table structure
 const magicSchools = `
     CREATE TABLE IF NOT EXISTS MagicSchools 
     (
@@ -42,6 +42,29 @@ const spells = `
 
 // Creating tables if they don't exists
 db.run(spells, (err) => {
+    if (err) 
+    { 
+        return console.error(err.message);
+    }
+
+    console.log('Table created successfully.');
+});
+
+/************ Species table ************/
+
+const species = `
+    CREATE TABLE IF NOT EXISTS Species
+    (
+        id INTEGER PRIMARY KEY,
+        name TEXT,
+        type TEXT,
+        img TEXT,
+        description TEXT,
+    )
+`;
+
+// Creating tables if they don't exists
+db.run(species, (err) => {
     if (err) 
     { 
         return console.error(err.message);
